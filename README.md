@@ -21,258 +21,140 @@ orders.csv
 products.csv
 ___________________________________________________________________________________________________________
 
-The column description for these csv files is given below.
+The column description for these CSV files is given below.
 
-The customers.csv contain following features:
+The customers.csv contains the following features:
 
-Features
+Features                  Description
 
-Description
+customer_id                ID of the consumer who made the purchase
 
-customer_id
+customer_unique_id         Unique ID of the consumer
 
-ID of the consumer who made the purchase
+customer_zip_code_prefix   Zip Code of the consumer’s location
 
-customer_unique_id
+customer_city              Name of the City from where the order is made
 
-Unique ID of the consumer
+customer_state             State Code from where the order is made (Eg. são Paulo - SP)
 
-customer_zip_code_prefix
+The sellers.csv contains the following features:
 
-Zip Code of consumer’s location
+Features                Description
 
-customer_city
+seller_id               Unique ID of the seller registered
 
-Name of the City from where order is made
+seller_zip_code_prefix  Zip Code of the seller’s location
 
-customer_state
+seller_city             Name of the City of the seller
 
-State Code from where order is made (Eg. são paulo - SP)
+seller_state            State Code (Eg. são Paulo - SP)
 
-The sellers.csv contains following features:
+The order_items.csv contains the following features:
 
-Features
+Features           Description
 
-Description
+order_id            A Unique ID of an order made by the consumers
 
-seller_id
+order_item_id       A Unique ID is given to each item ordered in the order
 
-Unique ID of the seller registered
+product_id          A Unique ID given to each product available on the site
 
-seller_zip_code_prefix
+seller_id           Unique ID of the seller registered in Target
 
-Zip Code of the seller’s location
+shipping_limit_date The date before which the ordered product must be shipped
 
-seller_city
+price                Actual price of the products ordered
 
-Name of the City of the seller
+freight_value        Price rate at which a product is delivered from one point to another
 
-seller_state
+The geolocations.csv contains the following features:
 
-State Code (Eg. são paulo - SP)
+Features                       Description
 
-The order_items.csv contain following features:
+geolocation_zip_code_prefix    First 5 digits of Zip Code
 
-Features
+geolocation_lat                Latitude
 
-Description
+geolocation_lng                Longitude
 
-order_id
+geolocation_city               City
 
-A Unique ID of order made by the consumers
+geolocation_state              State
 
-order_item_id
+The payments.csv contains the following features:
 
-A Unique ID given to each item ordered in the order
+Features                Description
 
-product_id
+order_id                A Unique ID of an order made by the consumers
 
-A Unique ID given to each product available on the site
+payment_sequential      Sequences of the payments made in case of EMI
 
-seller_id
+payment_type            Mode of payment used (Eg. Credit Card)
 
-Unique ID of the seller registered in Target
+payment_installments    Number of installments in case of EMI purchase
 
-shipping_limit_date
+payment_value           Total amount paid for the purchase order
 
-The date before which the ordered product must be shipped
+The orders.csv contains the following features:
 
-price
+Features                                Description
 
-Actual price of the products ordered
+order_id                                A Unique ID of an order made by the consumers
 
-freight_value
+customer_id                             ID of the consumer who made the purchase
 
-Price rate at which a product is delivered from one point to another
+order_status                            Status of the order made i.e. delivered, shipped, etc.
 
-The geolocations.csv contain following features:
+order_purchase_timestamp                Timestamp of the purchase
 
-Features
+order_delivered_carrier_date            Delivery date at which the carrier made the delivery
 
-Description
+order_delivered_customer_date           Date on which the customer got the product
 
-geolocation_zip_code_prefix
+order_estimated_delivery_date           Estimated delivery date of the products
 
-First 5 digits of Zip Code
+The reviews.csv contains the following features:
 
-geolocation_lat
+Features                  Description
 
-Latitude
+review_id                 ID of the review given on the product ordered by the order id
 
-geolocation_lng
+order_id                  A Unique ID of an order made by the consumers
 
-Longitude
+review_score              Review score given by the customer for each order on a scale of 1-5
 
-geolocation_city
+review_comment_title      Title of the review
 
-City
+review_comment_message    Review comments posted by the consumer for each order
 
-geolocation_state
+review_creation_date      Timestamp of the review when it is created
 
-State
+review_answer_timestamp   Timestamp of the review answered
 
-The payments.csv contain following features:
+The products.csv contains the following features:
 
-Features
+Features                        Description
 
-Description
+product_id                      A Unique identifier for the proposed project.
 
-order_id
+product_category_name           Name of the product category
 
-A Unique ID of order made by the consumers
+product_name_lenght             Length of the string which specifies the name given to the products ordered
 
-payment_sequential
+product_description_lenght      Length of the description written for each product ordered on the site
 
-Sequences of the payments made in case of EMI
+product_photos_qty              Number of photos of each product ordered available on the shopping portal
 
-payment_type
+product_weight_g                Weight of the products ordered in grams
 
-Mode of payment used (Eg. Credit Card)
+product_length_cm               Length of the products ordered in centimeters
 
-payment_installments
+product_height_cm               Height of the products ordered in centimeters
 
-Number of installments in case of EMI purchase
-
-payment_value
-
-Total amount paid for the purchase order
-
-The orders.csv contain following features:
-
-Features
-
-Description
-
-order_id
-
-A Unique ID of order made by the consumers
-
-customer_id
-
-ID of the consumer who made the purchase
-
-order_status
-
-Status of the order made i.e. delivered, shipped, etc.
-
-order_purchase_timestamp
-
-Timestamp of the purchase
-
-order_delivered_carrier_date
-
-Delivery date at which carrier made the delivery
-
-order_delivered_customer_date
-
-Date at which customer got the product
-
-order_estimated_delivery_date
-
-Estimated delivery date of the products
-
-The reviews.csv contain following features:
-
-Features
-
-Description
-
-review_id
-
-ID of the review given on the product ordered by the order id
-
-order_id
-
-A Unique ID of order made by the consumers
-
-review_score
-
-Review score given by the customer for each order on a scale of 1-5
-
-review_comment_title
-
-Title of the review
-
-review_comment_message
-
-Review comments posted by the consumer for each order
-
-review_creation_date
-
-Timestamp of the review when it is created
-
-review_answer_timestamp
-
-Timestamp of the review answered
-
-The products.csv contain following features:
-
-Features
-
-Description
-
-product_id
-
-A Unique identifier for the proposed project.
-
-product_category_name
-
-Name of the product category
-
-product_name_lenght
-
-Length of the string which specifies the name given to the products ordered
-
-product_description_lenght
-
-Length of the description written for each product ordered on the site
-
-product_photos_qty
-
-Number of photos of each product ordered available on the shopping portal
-
-product_weight_g
-
-Weight of the products ordered in grams
-
-product_length_cm
-
-Length of the products ordered in centimeters
-
-product_height_cm
-
-Height of the products ordered in centimeters
-
-product_width_cm
-
-Width of the product ordered in centimeters
+product_width_cm                Width of the product ordered in centimeters
 
 ___________________________________________________________________________________________________________
-
 Dataset schema:
-
-
-
 ___________________________________________________________________________________________________________
 
 Problem Statement:
@@ -281,40 +163,40 @@ Assuming you are a data analyst/ scientist at Target, you have been assigned the
 
 What does 'good' look like?
 
-Import the dataset and do usual exploratory analysis steps like checking the structure & characteristics of the dataset:
-Data type of all columns in the "customers" table.
-Get the time range between which the orders were placed.
-Count the Cities & States of customers who ordered during the given period.
-In-depth Exploration:
-Is there a growing trend in the no. of orders placed over the past years?
-Can we see some kind of monthly seasonality in terms of the no. of orders being placed?
-During what time of the day, do the Brazilian customers mostly place their orders? (Dawn, Morning, Afternoon or Night)
-0-6 hrs : Dawn
-7-12 hrs : Mornings
-13-18 hrs : Afternoon
-19-23 hrs : Night
-Evolution of E-commerce orders in the Brazil region:
-Get the month on month no. of orders placed in each state.
-How are the customers distributed across all the states?
-Impact on Economy: Analyze the money movement by e-commerce by looking at order prices, freight and others.
-Get the % increase in the cost of orders from year 2017 to 2018 (include months between Jan to Aug only).
-You can use the "payment_value" column in the payments table to get the cost of orders.
-Calculate the Total & Average value of order price for each state.
-Calculate the Total & Average value of order freight for each state.
-Analysis based on sales, freight and delivery time.
-Find the no. of days taken to deliver each order from the order’s purchase date as delivery time.
-Also, calculate the difference (in days) between the estimated & actual delivery date of an order.
-Do this in a single query.
+1. Import the dataset and do usual exploratory analysis steps like checking the structure & characteristics of the dataset:
+  1. Data type of all columns in the "customers" table.
+  2. Get the time range between which the orders were placed.
+  3. Count the Cities & States of customers who ordered during the given period.
+2. In-depth Exploration:
+  1. Is there a growing trend in the no. of orders placed over the past years?
+  2. Can we see some kind of monthly seasonality in terms of the no. of orders being placed?
+  3. During what time of the day, do the Brazilian customers mostly place their orders? (Dawn, Morning, Afternoon or Night)
+        0-6 hrs: Dawn
+        7-12 hrs: Mornings
+        13-18 hrs: Afternoon
+        19-23 hrs: Night
+3. Evolution of E-commerce orders in the Brazil region:
+   1. Get the month-on-month no. of orders placed in each state.
+   2. How are the customers distributed across all the states?
+4. Impact on the Economy: Analyze the money movement by e-commerce by looking at order prices, freight, and others.
+   1. Get the % increase in the cost of orders from the year 2017 to 2018 (include months between Jan to Aug only).
+   2. You can use the "payment_value" column in the payments table to get the cost of orders.
+   3. Calculate the Total and average value of order price for each state.
+   4. Calculate the Total and average value of order freight for each state.
+5. Analysis based on sales, freight, and delivery time.
+    1. Find the no. of days taken to deliver each order from the order’s purchase date as delivery time.
+    2. Also, calculate the difference (in days) between the estimated & actual delivery date of an order.
+        Do this in a single query.
 
 You can calculate the delivery time and the difference between the estimated & actual delivery date using the given formula:
-time_to_deliver = order_delivered_customer_date - order_purchase_timestamp
-diff_estimated_delivery = order_estimated_delivery_date - order_delivered_customer_date
-Find out the top 5 states with the highest & lowest average freight value.
-Find out the top 5 states with the highest & lowest average delivery time.
-Find out the top 5 states where the order delivery is really fast as compared to the estimated date of delivery.
-You can use the difference between the averages of actual & estimated delivery date to figure out how fast the delivery was for each state.
-Analysis based on the payments:
-Find the month on month no. of orders placed using different payment types.
-Find the no. of orders placed on the basis of the payment installments that have been paid.
+ 1. time_to_deliver = order_delivered_customer_date - order_purchase_timestamp
+ 2. diff_estimated_delivery = order_estimated_delivery_date - order_delivered_customer_date
+    3. Find out the top 5 states with the highest & lowest average freight value.
+    4. Find out the top 5 states with the highest & lowest average delivery time.
+    5. Find out the top 5 states where the order delivery is really fast as compared to the estimated date of delivery.
+       You can use the difference between the averages of actual & estimated delivery dates to figure out how fast the delivery was for each state.
+6. Analysis based on the payments:
+ 1. Find the month-on-month no. of orders placed using different payment types.
+ 2. Find the no. of orders placed on the basis of the payment installments that have been paid.
 ___________________________________________________________________________________________________________
 
